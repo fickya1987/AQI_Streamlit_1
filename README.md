@@ -3,7 +3,7 @@
 ## Setup environment
 ```
 conda create --name aqi_strm python=3.10.9
-conda activate aqi_strm-ds
+conda activate aqi_strm
 pip install numpy pandas matplotlib streamlit
 ```
 
