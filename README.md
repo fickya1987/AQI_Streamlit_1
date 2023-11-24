@@ -11,3 +11,6 @@ pip install numpy pandas matplotlib streamlit
 ```
 streamlit run dashboard.py
 ```
+
+## My streamlit app
+https://aqi-strm-jm-90.streamlit.app/
