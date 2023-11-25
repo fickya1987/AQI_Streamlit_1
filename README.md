@@ -9,7 +9,7 @@ pip install numpy pandas matplotlib streamlit
 
 ## Run steamlit app
 ```
-streamlit run dashboard.py
+streamlit run project.py
 ```
 
 ## My streamlit app
