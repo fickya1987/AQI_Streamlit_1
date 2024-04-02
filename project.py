@@ -34,7 +34,7 @@ with st.sidebar:
     selected_hour_end = row2_col2.selectbox('Pilih Jam Akhir', list(range(24)), index=23)
 
     # Dropdown untuk memilih stasiun
-    selected_station = st.selectbox('Pilih Stasiun', ['All'] + list(aqi_df['station'].unique()), index=0)
+    selected_station = st.selectbox('Pilih Titik Pantau', ['All'] + list(aqi_df['station'].unique()), index=0)
 
     # Tombol untuk mengontrol apakah garis antara titik-titik akan ditampilkan atau tidak
     show_line = st.toggle('Tarik Garis', value=True)
@@ -48,7 +48,7 @@ if selected_station != 'All':
 else:
     main_df = aqi_df[(aqi_df["date"] >= start_datetime) & (aqi_df["date"] <= end_datetime)]
 
-st.header('AQI (12 Titik) Area sekitar PLTU')
+st.header('AQI - 12 Titik Pantau Area sekitar PLTU')
 
 st.subheader('Dataframes')
 
@@ -87,6 +87,6 @@ ax.grid(True)
 st.pyplot(fig)
 
 st.subheader('Info')
-st.write('Jika data yang dimunculkan di grafik garisnya acak, disarankan memilih satu stasiun atau menonaktifkan toggle tarik garis.')
+st.write('Jika data yang dimunculkan di grafik garisnya acak, disarankan memilih satu titik pantau emisi atau menonaktifkan toggle tarik garis.')
 
 st.caption('Copyright (c) Ficky Alkarim 2024')
