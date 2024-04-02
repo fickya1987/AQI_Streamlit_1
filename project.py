@@ -48,12 +48,12 @@ if selected_station != 'All':
 else:
     main_df = aqi_df[(aqi_df["date"] >= start_datetime) & (aqi_df["date"] <= end_datetime)]
 
-st.header('AQI di Beijing (12 Station) China')
+st.header('AQI (12 Titik) Area sekitar PLTU')
 
 st.subheader('Dataframes')
 
 # Tampilkan hasil dengan st.dataframe()
-st.write(f'Data antara {start_datetime} dan {end_datetime}, Stasiun: {selected_station if selected_station != "All" else "All"}')
+st.write(f'Data antara {start_datetime} dan {end_datetime}, Titik Pantau: {selected_station if selected_station != "All" else "All"}')
 st.data_editor(main_df, width=800)
 
 st.subheader('Visualization')
@@ -89,4 +89,4 @@ st.pyplot(fig)
 st.subheader('Info')
 st.write('Jika data yang dimunculkan di grafik garisnya acak, disarankan memilih satu stasiun atau menonaktifkan toggle tarik garis.')
 
-st.caption('Copyright (c) Jamil Ulumudin 2023')
+st.caption('Copyright (c) Ficky Alkarim 2024')
