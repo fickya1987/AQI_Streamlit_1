@@ -48,12 +48,12 @@ if selected_station != 'All':
 else:
     main_df = aqi_df[(aqi_df["date"] >= start_datetime) & (aqi_df["date"] <= end_datetime)]
 
-st.header('AQI - 12 Titik Pantau Area sekitar PLTU')
+st.header('AQI - 12 Monitoring Points around Smelters')
 
 st.subheader('Dataframes')
 
 # Tampilkan hasil dengan st.dataframe()
-st.write(f'Data antara {start_datetime} dan {end_datetime}, Titik Pantau: {selected_station if selected_station != "All" else "All"}')
+st.write(f'Data from {start_datetime} and {end_datetime}, Monitoring Points: {selected_station if selected_station != "All" else "All"}')
 st.data_editor(main_df, width=800)
 
 st.subheader('Visualization')
